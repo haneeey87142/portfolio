@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdulla Hani — Web Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Custom cursor ── -->
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- ── Navigation ── -->
+  <nav id="nav">
+    <a class="nav-logo" href="#hero">AH.dev</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section id="hero">
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+
+    <div class="hero-photo-wrap">
+      <!-- Replace image.jpg in your public/ folder with your own photo -->
+      <img src="image.jpg" alt="Abdulla Hani" onerror="this.style.display='none';document.getElementById('photo-fallback').style.display='flex'" />
+      <span class="photo-placeholder" id="photo-fallback">AH</span>
+    </div>
+
+    <p class="hero-tag">Available for work · 2026</p>
+    <h1 class="hero-name">
+      Abdulla<br />
+      <span class="hero-name-accent">Hani</span>
+    </h1>
+    <p class="hero-sub">// Frontend &amp; Backend Developer — clean code, minimal design, real products.</p>
+
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#contact" class="btn btn-outline">Get In Touch</a>
+    </div>
+  </section>
+
+  <!-- ── About ── -->
+  <section class="section" id="about">
+    <div class="reveal">
+      <span class="section-tag">01 — About</span>
+      <h2 class="section-title">Who I Am</h2>
+      <div class="card card-about">
+        <p>
+          I'm a passionate beginner web developer leveling up in both frontend and backend development.
+          I enjoy building clean, minimal web applications using modern technologies — with a growing focus on
+          Node.js, REST APIs, and database-driven projects. Every line of code is a step forward.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Skills ── -->
+  <section class="section" id="skills">
+    <div class="reveal">
+      <span class="section-tag">02 — Skills</span>
+      <h2 class="section-title">Tech Stack</h2>
+      <div class="skills-grid">
+        <div class="skill-pill"><span class="dot"></span>HTML5</div>
+        <div class="skill-pill"><span class="dot"></span>CSS3</div>
+        <div class="skill-pill"><span class="dot"></span>JavaScript</div>
+        <div class="skill-pill"><span class="dot"></span>Node.js</div>
+        <div class="skill-pill"><span class="dot"></span>Express.js</div>
+        <div class="skill-pill"><span class="dot"></span>PostgreSQL</div>
+        <div class="skill-pill"><span class="dot"></span>REST APIs</div>
+        <div class="skill-pill"><span class="dot"></span>Git &amp; GitHub</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Projects ── -->
+  <section class="section" id="projects">
+    <div class="reveal">
+      <span class="section-tag">03 — Projects</span>
+      <h2 class="section-title">What I've Built</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <span class="project-num">01</span>
+          <h3 class="project-title">Portfolio Website</h3>
+          <p class="project-desc">This site — built from scratch with a custom animated frontend, a live Node.js backend, and Neon PostgreSQL for the feedback system.</p>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span><span>Node.js</span>
+          </div>
+        </article>
+        <article class="project-card">
+          <span class="project-num">02</span>
+          <h3 class="project-title">Feedback System</h3>
+          <p class="project-desc">Full-stack form handler using Express.js + Neon serverless PostgreSQL. Stores entries with timestamps, ready for a dashboard extension.</p>
+          <div class="project-tags">
+            <span>Express</span><span>Neon DB</span><span>REST API</span>
+          </div>
+        </article>
+        <article class="project-card">
+          <span class="project-num">03</span>
+          <h3 class="project-title">Coming Soon</h3>
+          <p class="project-desc">Always building something new. Next up: a task manager with user auth. Follow along on GitHub for updates.</p>
+          <div class="project-tags">
+            <span>In Progress</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact & Feedback ── -->
+  <section class="section" id="contact">
+    <div class="reveal">
+      <span class="section-tag">04 — Contact</span>
+      <h2 class="section-title">Get In Touch</h2>
+
+      <div class="contact-row-list">
+        <div class="contact-item">
+          <span class="contact-icon">✉</span>
+          <a href="mailto:haneey87142@gmail.com">haneey87142@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">☎</span>
+          <a href="tel:+918714293850">+91 87142 93850</a>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top: 40px;">
+        <h3 class="form-heading">Send a Message</h3>
+        <div class="feedback-form" id="feedbackForm">
+          <div class="form-row">
+            <div class="field">
+              <label for="f-name">Name</label>
+              <input type="text" id="f-name" placeholder="Your name" />
+            </div>
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input type="email" id="f-email" placeholder="your@email.com" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-msg">Message</label>
+            <textarea id="f-msg" rows="5" placeholder="Your message or feedback…"></textarea>
+          </div>
+          <div id="responseMsg" class="response-msg" aria-live="polite"></div>
+          <button class="btn btn-primary" id="submitBtn">Send Message</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer id="footer">
+    <p>© 2026 Abdulla Hani — All rights reserved</p>
+    <span class="footer-pulse" aria-hidden="true"></span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
